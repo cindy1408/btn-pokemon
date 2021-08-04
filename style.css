@@ -1,5 +1,6 @@
 body {
     margin: 3%;
+    padding: 0 10%;
 }
 
 /* navigation */
@@ -8,6 +9,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 nav a{
@@ -152,11 +154,32 @@ img {
 .imgContainer{
     float:left;
 } 
-img {
+main img {
     border: 5px solid #555;
   }
 
 
 div.a {
     font-size: 20px;
+  }
+
+
+  .news {
+    text-decoration: underline;
+          }
+  .wrap {
+  font-family: 'Times New Roman', Times, serif;
+  margin-right: 7rem;
+  margin-left: 7rem;
+  text-align: center;
+  }
+  .Profile img {
+     border-radius: 50%;
+    }
+  .heading h1 {
+  display: inline-block;
+  position: relative
+  }
+  .comments p {
+    position: right 
   }
