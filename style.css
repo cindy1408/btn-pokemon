@@ -30,6 +30,28 @@ a:hover {
     max-height: 30px;
     width:auto;
 }
+/* MENU PART */
+.collasp-box{
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    background-color:rgb(244,244,244);
+}
+.collapsible-menu {
+   background-color:bisque;
+   display: none;
+   flex-direction: row;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* MENU PART ENDS */
 
 span a {
     margin: 0;
