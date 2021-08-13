@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 
 function clickMe(){
     alert("You've clicked me?")
@@ -21,10 +21,9 @@ const getPokemonDetails = (id) => {
             // console.log(pokemonInfo.name)
             
             const {name, base_happiness, capture_rate} = pokemonInfo
-            searchResult.push(`The following id:${id} is ${name} with a happiness rate of ${base_happiness} and a capture rate of ${capture_rate} and is the color ${pokemonInfo.color.name}`)
+            searchResult.push(`The following id: ${id} is ${name} with a happiness rate of ${base_happiness} and a capture rate of ${capture_rate} and is the color ${pokemonInfo.color.name}`)
             console.log(name);
             console.log(searchResult);
-            console.log('HERE! :D')
         })
         // This will only give an empty object
         //log(JSON.stringify(data))
@@ -33,10 +32,12 @@ const getPokemonDetails = (id) => {
         })
         console.log(searchResult)
     })
-    // const resultDiv = document.getElementById('result');
-    // resultDiv.innerHTML(searchResult)
+
+
+    document.getElementById('button').onclick = function(){return searchResult}
+
 }
 
 
 
-getPokemonDetails(15);
+getPokemonDetails(3);
