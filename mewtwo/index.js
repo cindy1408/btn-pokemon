@@ -23,21 +23,22 @@ const getPokemonDetails = (id) => {
             const {name, base_happiness, capture_rate} = pokemonInfo
             searchResult.push(`The following id: ${id} is ${name} with a happiness rate of ${base_happiness} and a capture rate of ${capture_rate} and is the color ${pokemonInfo.color.name}`)
             console.log(name);
-            console.log(searchResult);
+            console.log(searchResult[0]);
         })
         // This will only give an empty object
         //log(JSON.stringify(data))
         searchResult.map((pokemon) => {
             {pokemon}
         })
-        console.log(searchResult)
+        // console.log(searchResult)
     })
 
 
-    document.getElementById('button').onclick = function(){return searchResult}
-
+    document.getElementById('button').onclick = function(){return getPokemonDetails(6)}
+    const button = document.getElementById('result');
+    result.innerHTML += searchResult[0]
+    // button.innerHTML += (JSON && JSON.stringify ? JSON.stringify(getPokemonDetails(6)) : getPokemonDetails(6))
 }
 
 
-
-getPokemonDetails(3);
+getPokemonDetails(8);
