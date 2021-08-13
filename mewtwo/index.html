@@ -8,19 +8,20 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <div>
+    <div class = 'title'>
         <h1> MewTwo </h1>
     </div>
     <nav>
         <ul>
             <li><img class = 'logo' src='logo.jpg'/></li>
             <li><a href="about-us.html">About us</a></li>
-            <li>Contact Us</li>
+            <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
     </nav>
     
     <div class="search-btn">
-        <input placeholder = "enter pokemon id" name="search"></input><button type="submit" onClick ="{(e) => getPokemonDetails()}" >Search</button>
+        <h3>Please enter your favorite number: </h3>
+        <input placeholder = "enter pokemon id" name="search"></input><button id = 'button' type="submit" onclick="getPokemonDetails()">Search</button>
     </div>
     
     <div id="result">
