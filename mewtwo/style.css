@@ -19,7 +19,7 @@ body {
 
 .title{
     position: relative;
-    margin: 1% 45%;
+    margin: 1% 37%;
     background-color: transparent;
 }
 
@@ -45,7 +45,6 @@ nav li {
 
 
 .search-btn{
-    border: solid purple 2px;
     margin: 5%;
     padding: 10% 5%;
     display: flex;
@@ -66,4 +65,15 @@ button {
 
 .search-btn h3 {
     background-color: hsla(0, 100%, 90%, 0);
+}
+
+.result-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#result{
+    text-align: center;
+    width: 80%;
 }

@@ -1,47 +1,23 @@
-// const fetch = require('node-fetch');
 
-function clickMe() {
-    alert("You've clicked me?");
-}
+const getPokemonDetails = async () => {
+    let id = document.getElementById('userInput').value;
 
-const getPokemonDetails = (id) => {
-    // document.addEventListener('search-btn', onchange())
-    const fetchPokemons = fetch(
+    const responseObject = await fetch(
         `https://pokeapi.co/api/v2/pokemon-species/${id}/`
     );
-    const searchResult = [];
-    // fetchPokemons is [Object Promise]
-    //log(fetchPokemons)
-    fetchPokemons.then((data) => {
-        // data is [Object Response]
-        // console.log(data);
-        // data.json() is [Object Promise]
-        data.json().then((pokemonInfo) => {
-            //JSON.stringify(pokemonInfo) shows data within the object.
-            // pokemonInfo = JSON.stringify(pokemonInfo)
-            // console.log(pokemonInfo.name)
+    // console.log(responseObject);
 
-            const { name, base_happiness, capture_rate } = pokemonInfo;
-            searchResult.push(
-                `The following id: ${id} is ${name} with a happiness rate of ${base_happiness} and a capture rate of ${capture_rate} and is the color ${pokemonInfo.color.name}`
-            );
-            console.log(name);
-            console.log(searchResult[0]);
-        })
-        // This will only give an empty object
-        //log(JSON.stringify(data))
-        searchResult.map((pokemon) => {
-            {pokemon}
-        })
-        // console.log(searchResult)
-    })
+    const extractJson = await responseObject.json();
+    // console.log(extractJson);
 
+    const {name, base_happiness, capture_rate, color} = extractJson;
+    // console.log(`${name}, ${base_happiness}, ${capture_rate}, ${color.name}`)
 
-    document.getElementById('button').onclick = function(){return getPokemonDetails(6)}
-    const button = document.getElementById('result');
-    result.innerHTML += searchResult[0]
-    // button.innerHTML += (JSON && JSON.stringify ? JSON.stringify(getPokemonDetails(6)) : getPokemonDetails(6))
+    document.getElementById('result').innerHTML = 
+    `Your favorite number corrosponds to the pokemon <b>${name}</b>! <br>
+    It has a <b> base happiness of: ${base_happiness} </b>, 
+    a <b> capture rate of: ${capture_rate}</b> and the favorite color 
+    is <b>${color.name}</b>!`;
 }
 
 
-getPokemonDetails(8);
