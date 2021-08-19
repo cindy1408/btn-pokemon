@@ -30,8 +30,8 @@ function startGame() {
     },
     firstQuestion: {
         message: "Are you an introvert? yes/no",
-        introvert: "home",
-        extrovert: "partyAnimal"
+        yes: "home",
+        no: "partyAnimal"
     },
     home: {
       message: "Do you enjoy being with more than 20 people? yes/no",
@@ -65,7 +65,10 @@ function startGame() {
 
     if (answer === "yes") {
       step = steps[currentStep].yes;
-    } else if (isNumber(answer) < 10) {
+    } else if (answer == "no") {
+        step = steps[currentStep].no;
+    }
+    else if (isNumber(answer) < 10) {
       console.log(`${answer} indicates you're an introvert!`);
     } else if ( isNumber(answer) >= 10 && isNumber(answer) < 25){
         console.log(`${answer} indicates you're an ambivert!`)
@@ -74,7 +77,7 @@ function startGame() {
         // jumps to extrovert question
     }
     else {
-      step = steps[currentStep].no;
+      console.log('invalid')
     }
 
     if (typeof step === "function") {
