@@ -1,0 +1,180 @@
+<html lang="eng">
+
+</html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav>
+    <div id="logo-menu">
+        <div class="content">
+            <ul>
+                <li class="logo">
+                    <a href="#">
+                        <img src="https://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/img/bbc-blocks-dark.png"
+                            alt="BBC">
+                    </a>
+                </li>
+                <li class="sign-in">
+                    <a class="underlined" href="#">
+                        <img src="https://static.bbci.co.uk/id/0.27.15/img/bbcid_orb_signin_dark.png" alt="Profile">
+                        <span>Sign in</span>
+                    </a>
+                <li><a href="">News</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Sport</a></li>
+                <li><a href="">Weather</a></li>
+                <li><a href="">iPlayer</a></li>
+                <li><a href="">Sounds</a></li>
+                <li><a href="">CBBC</a></li>
+                <li><a href="">CBeebies</a></li>
+                <li><a href="">More</a></li>
+                <li class="search">
+                    <!-- <div class="search-container"> -->
+                        <input type="text" placeholder="Search">
+                        <a class="search-button" href="#">
+                            <img src="https://static.bbci.co.uk/frameworks/barlesque/2.83.4/orb/4/img/orb-search-dark.png"
+                                alt="Search">
+                        </a>
+                    <!-- </div> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="red-header">
+        <div id="department">
+            <div class="content">
+                <a href="#">
+                    <h1>News</h1>
+                </a>
+            </div>
+        </div>
+
+        <div id="primary-nav">
+            <div class="content">
+                <ul>
+                    <li><a href=""><span>Home</span></a></li>
+                    <li><a href="">Coronavirus</a></li>
+                    <li><a href="">Brexit</a></li>
+                    <li><a href="">UK</a></li>
+                    <li><a href="">World</a></li>
+                    <li><a href="">Business</a></li>
+                    <li><a href="">Politics</a></li>
+                    <li><a href="">Tech</a></li>
+                    <li><a href="">Science</a></li>
+                    <li><a href="">Health</a></li>
+                    <li><a href="">Family &amp; Education</a></li>
+                    <li><a href="">Entertainment &amp; Arts</a></li>
+                    <li><a href="">Stories</a></li>
+                    <li><a href="">In Pictures</a></li>
+                    <li><a href="">More</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="sub-nav">
+        <div class="countries">
+            <ul>
+                <li><a href="">England</a></li>
+                <li><a href="">N. Ireland</a></li>
+                <li><a href="">Scotland</a></li>
+                <li><a href="">Alba</a></li>
+                <li><a href="">Wales</a></li>
+                <li><a href="">Cymru</a></li>
+                <li><a href="">Local News</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="content">
+        <div class="main-story">
+            <article class="main-width">
+                <div class = "main">
+                    <a href="">
+                        <div id="main-article" onclick = mainArticle()>
+                            <h2>Cover-up culture saw hundreds abused in care homes </h2>
+                        </div>
+                        <div class='main-content' onclick="popup">
+                            <img class="article-image" src="https://ichef.bbci.co.uk/news/240/cpsprodpb/13C75/production/_119631018_hi068906732.jpg" alt="care-homes">
+                        
+                            <p>Staff and councillors presided over a "culture of cover-up" that led to more than 700 children in
+                            south London care homes suffering cruelty and sexual abuse, an inquiry has found.</p>
+                        </div>
+                    </a>
+                
+                </div>
+            
+                <p class="post-data"><img
+                        src="https://www.seekpng.com/png/detail/103-1035319_clock-clipart-square-clock-clipart.png"
+                        alt="Clock Clipart Square - Clock Clipart@seekpng.com" width=15px height=15px>1min read<a
+                        class="country" href="#">UK</a>
+                </p>
+                <button onclick=exit()>close</button>
+            </article>
+        
+        <!--
+      -->
+        <div class="sidebar">
+            <div>
+                <h2>Olympic Games</h2>
+            </div>
+            <div class="mini-article">
+            <article>
+                <a href="#">
+                    <div onclick=articleOne()>
+                        <img src="https://assets.aws.worldathletics.org/eeab0d57-f182-49a2-ace9-64f8e92ab192.jpg" alt="Article image">
+                        <div class="time">4:52</div>
+                    
+                    <h3>High Jumps</h3>
+                    <p class="post-data">Time posted</p>
+                </div>
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <div class="images" onclick=articleTwo()>
+                        <img src="https://assets.aws.worldathletics.org/60f84d2f0f2ded52d0594d3c.jpg" alt="Article image">
+                        <div class="time">1:19</div>
+                    
+                    <h3>USA</h3>
+                    <p class="post-data">Time posted</p>
+                    </div>
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <div class="images" onclick=articleThree()>
+                        <img src="https://assets.aws.worldathletics.org/07082d03-f804-464f-8b89-15fb3e3ef8ac.jpg" alt="Article image">
+                        <div class="time">0:36</div>
+                    
+                    <h3>Article title</h3>
+                    <p class="post-data">Time posted</p>
+                </div>
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <div class="images" onclick=articleFour()>
+                        <img src="https://assets.aws.worldathletics.org/ee44e8ae-e9ed-4d70-94d0-a3a5728e4f97.jpg" alt="Article image">
+                        <div class="time">1:19</div>
+                   
+                    <h3>Article title</h3>
+                    <p class="post-data">Time posted</p>
+                </div>
+                </a>
+            </article>
+
+        </div>
+    </div>
+    </div>
+</main>
+<script src="index.js"></script>
+</body>
