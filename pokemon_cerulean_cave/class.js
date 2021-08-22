@@ -1,9 +1,10 @@
 class Health {
-    constructor(name, healthPoints){
-        this.maxHealth = 50; 
-        this.healthPoints = healthPoints;
-        this.name = name;
+    constructor(){
+        this.maxHealth;
+        this.healthPoints;
+        this.name;
         this.numHealthPotions = 2;
+        this.probability;
     }
     deductingPoints(damage){
         this.healthPoints = this.healthPoints - damage;
@@ -42,7 +43,14 @@ class Health {
             this.numHealthPotions = this.numHealthPotions + num; 
             return this.numHealthPotions      
     }
-    
+    catchRate(){
+        let num = Math.floor(Math.random()*100);
+        if(num < this.probability){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 module.exports = Health;
